@@ -1,5 +1,9 @@
 # Architecture
 
+> :material-graph-outline: [Open the interactive runtime architecture diagram](architecture-diagram.html)
+> — explorable HTML generated from this repository's actual source (components link back to
+> the exact file/line evidence).
+
 ```
 frontend/  React + Vite SPA
   MapView            -> picks LeafletMap (default) or GoogleMap (if VITE_GOOGLE_MAPS_API_KEY set)
