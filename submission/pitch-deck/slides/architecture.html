@@ -1,0 +1,47 @@
+<section id="architecture" data-section="How the AI actually works" data-transition="fade" style="background:#0B1F26;color:#E8F0EA;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 96px 160px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <p style="color:#7FA396;font-size:24px;font-weight:600;letter-spacing:2px">ARCHITECTURE</p>
+    <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;color:#F5F8F6">Five agents, one Google ADK pipeline</h2>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px;flex:1">
+    <div style="width:220px;display:flex;flex-direction:column;justify-content:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:24px;height:220px">
+      <p style="font-size:20px;color:#7FA396;font-weight:600">STEP 1</p>
+      <h3 style="font-size:26px;font-weight:600;color:#F5F8F6">Coordinator</h3>
+      <p style="font-size:19px;color:#B9CFC6;line-height:1.35">Triages the request: which city, what scenario</p>
+    </div>
+    <x-shape kind="arrow-right" style="background:#4285F4;width:40px;height:20px"></x-shape>
+    <div style="width:240px;display:flex;flex-direction:column;gap:10px">
+      <div style="background:rgba(66,133,244,0.14);border:1px solid rgba(66,133,244,0.4);border-radius:14px;padding:18px;height:97px;display:flex;flex-direction:column;justify-content:center;gap:4px">
+        <p style="font-size:18px;color:#8FB4FA;font-weight:600">PARALLEL</p>
+        <h3 style="font-size:22px;font-weight:600;color:#F5F8F6">Air Quality Monitor</h3>
+      </div>
+      <div style="background:rgba(66,133,244,0.14);border:1px solid rgba(66,133,244,0.4);border-radius:14px;padding:18px;height:97px;display:flex;flex-direction:column;justify-content:center;gap:4px">
+        <p style="font-size:18px;color:#8FB4FA;font-weight:600">PARALLEL</p>
+        <h3 style="font-size:22px;font-weight:600;color:#F5F8F6">Weather Context</h3>
+      </div>
+    </div>
+    <x-shape kind="arrow-right" style="background:#4285F4;width:40px;height:20px"></x-shape>
+    <div style="width:220px;display:flex;flex-direction:column;justify-content:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:24px;height:220px">
+      <p style="font-size:20px;color:#7FA396;font-weight:600">STEP 3</p>
+      <h3 style="font-size:24px;font-weight:600;color:#F5F8F6">Health Impact Analyst</h3>
+      <p style="font-size:19px;color:#B9CFC6;line-height:1.35">Scores exposure risk near schools &amp; hospitals</p>
+    </div>
+    <x-shape kind="arrow-right" style="background:#4285F4;width:40px;height:20px"></x-shape>
+    <div style="width:220px;display:flex;flex-direction:column;justify-content:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:24px;height:220px">
+      <p style="font-size:20px;color:#7FA396;font-weight:600">STEP 4</p>
+      <h3 style="font-size:24px;font-weight:600;color:#F5F8F6">Intervention Simulator</h3>
+      <p style="font-size:19px;color:#B9CFC6;line-height:1.35">Projects AQI under a proposed what-if scenario</p>
+    </div>
+    <x-shape kind="arrow-right" style="background:#F9AB00;width:40px;height:20px"></x-shape>
+    <div style="width:240px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:rgba(249,171,0,0.12);border:1px solid rgba(249,171,0,0.4);border-radius:16px;padding:24px;height:220px">
+      <p style="font-size:20px;color:#F9AB00;font-weight:600">STEP 5 · LOOP</p>
+      <h3 style="font-size:24px;font-weight:600;color:#F5F8F6">Synthesis ⇄ Critic</h3>
+      <p style="font-size:19px;color:#EAD9A8;line-height:1.35">Critic checks the draft, sends it back for revision, up to 2 passes</p>
+    </div>
+  </div>
+  <div style="display:flex;gap:16px;background:rgba(255,255,255,0.04);border-radius:16px;padding:24px 32px;align-items:center">
+    <x-icon name="Verified" style="color:#1E8E3E;width:32px;height:32px"></x-icon>
+    <p style="font-size:22px;color:#B9CFC6">Every arrow is a real Gemini call inside a real ADK <b style="color:#F5F8F6">ParallelAgent</b> / <b style="color:#F5F8F6">LoopAgent</b> — not a single prompt pretending to be five agents.</p>
+  </div>
+  <aside>Walk the diagram left to right in the demo narration. The key differentiator vs. every other AQI app: this is genuine multi-agent orchestration using Google's Agent Development Kit, with a real critic/revision loop implemented via ADK's exit_loop_tool — not marketing language.</aside>
+</section>

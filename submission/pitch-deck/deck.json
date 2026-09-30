@@ -1,0 +1,17 @@
+{
+  "v": 4,
+  "createdOnFiles": {"v": 1, "at": "2026-09-30T11:00:00Z"},
+  "lists": "css",
+  "title": "AeroSignal — Clean Air & Climate Resilience",
+  "order": ["cover", "problem", "solution", "architecture", "ai-execution", "real-data", "whatif", "alerts", "india-scale", "deployability", "impact", "closing"],
+  "sections": {
+    "s1": {"description": "Why this matters", "start": "cover"},
+    "s2": {"description": "What we built", "start": "solution"},
+    "s3": {"description": "How the AI actually works", "start": "architecture"},
+    "s4": {"description": "Built for India, ready to deploy", "start": "india-scale"}
+  },
+  "faces": {
+    "space-grotesk": {"family": "Space Grotesk", "href": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"},
+    "ibm-plex-sans": {"family": "IBM Plex Sans", "href": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"}
+  }
+}

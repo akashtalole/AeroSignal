@@ -1,0 +1,28 @@
+<section id="real-data" data-transition="fade" style="background:#ffffff;color:#12241F;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <p style="color:#1E8E3E;font-size:24px;font-weight:600;letter-spacing:2px">REAL OR REALISTIC DATA</p>
+    <h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;color:#12241F">Every number traces back to a real source</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;flex:1">
+    <div style="background:#F5F8F6;border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:12px">
+      <p style="font-size:20px;color:#1E8E3E;font-weight:700">LIVE</p>
+      <h3 style="font-size:28px;font-weight:600">Open-Meteo</h3>
+      <p style="font-size:22px;color:#4A5D57;line-height:1.4">Current + 48h PM2.5, PM10, NO₂, O₃, CO and wind/rain — fetched per city on every request, no key required.</p>
+    </div>
+    <div style="background:#F5F8F6;border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:12px">
+      <p style="font-size:20px;color:#1E8E3E;font-weight:700">LIVE</p>
+      <h3 style="font-size:28px;font-weight:600">Google Earth Engine</h3>
+      <p style="font-size:22px;color:#4A5D57;line-height:1.4">Sentinel-2 surface reflectance — true-color and NDVI composites, filtered for cloud cover, over each corridor.</p>
+    </div>
+    <div style="background:#F5F8F6;border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:12px">
+      <p style="font-size:20px;color:#F9AB00;font-weight:700">DETERMINISTIC, LABELED</p>
+      <h3 style="font-size:28px;font-weight:600">What-if simulation</h3>
+      <p style="font-size:22px;color:#4A5D57;line-height:1.4">Intervention impact is an illustrative, documented heuristic — never presented as measured fact.</p>
+    </div>
+  </div>
+  <div style="display:flex;gap:16px;background:#12241F;border-radius:16px;padding:28px 32px;align-items:center">
+    <x-icon name="Trust" style="color:#7FA396;width:32px;height:32px"></x-icon>
+    <p style="font-size:24px;color:#E8F0EA">If a live call fails, the response is honestly labeled <b style="color:#F9AB00">"cached baseline"</b> instead of silently faking live data — every response says exactly where its numbers came from.</p>
+  </div>
+  <aside>This slide answers "real or realistic data — public datasets, sample data, or APIs where live data isn't available." Stress the honesty: the system never claims a number is live when it isn't.</aside>
+</section>
